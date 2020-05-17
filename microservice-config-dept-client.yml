@@ -35,6 +35,11 @@ eureka:
       instance-id: microservicecloud-dept8001
       prefer-ip-address: true     #访问路径可以显示IP地址     
       
+info: 
+     app.name: shr-microservicecloud
+     company.name: shr
+     build.artifactId: ${project.artifactId}$
+     build.version: $project.version$
 ---
 server: 
     port: 8001
@@ -45,7 +50,7 @@ spring:
     datasource:
         type:   com.alibaba.druid.pool.DruidDataSource
         driver-class-name:   com.mysql.jdbc.Driver
-        url:   jdbc:mysql://localhost:3306/shr01?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+        url:   jdbc:mysql://localhost:3306/shr02?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
         username:   root
         password:   hello_bbye  
         dbcp2:
@@ -66,3 +71,9 @@ eureka:
    instance:
       instance-id: microservicecloud-dept8001
       prefer-ip-address: true     #访问路径可以显示IP地址 
+      
+info: 
+     app.name: shr-microservicecloud
+     company.name: shr
+     build.artifactId: ${project.artifactId}$
+     build.version: $project.version$
